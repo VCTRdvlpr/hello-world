@@ -6,21 +6,23 @@ import { useState } from 'react';
 function App() {
 
   const[contentVisibleHttp, setContentVisibleHttp] = useState(false);
-
   const handleButtonClickHttp = () =>{
     setContentVisibleHttp(!contentVisibleHttp)
   }
 
   const[contentVisibleVeVector, setContentVisibleVector] = useState(false);
-
   const handleButtonClickVector = () =>{
     setContentVisibleVector(!contentVisibleVeVector)
   }
 
   const[contentVisibleTcp, setContentVisibleTcp] = useState(false);
-
   const handleButtonClickTcp = () =>{
     setContentVisibleTcp(!contentVisibleTcp)
+  }
+
+  const[contentVisibleVpn, setContentVisibleVpn] = useState(false); 
+  const handleButtonClickVpn = () =>{
+    setContentVisibleVpn(!contentVisibleVpn)
   }
 
   return (
@@ -48,8 +50,7 @@ function App() {
                 coletivamente como proxies, que executam operações diferentes e atuam como gateways (intermediários) 
                 ou caches, por exemplo.
               </p>
-              </div>
-            }
+              </div>}
           </li>
           <li>
             <NavBtnComponent title='WWW' onClick={handleButtonClickVector} />
@@ -166,7 +167,45 @@ function App() {
                 Se você se preocupa com isso, por exemplo, se estiver enviando informações de identificação pessoal ou financeiras, é possível usar uma rede virtual privada (VPN) para criptografar seus dados.
                 </p>                            
             </div>}
-          </li>                
+          </li>      
+          <li>
+            <NavBtnComponent title='VPN' onClick={handleButtonClickVpn} />
+            {contentVisibleVpn && 
+              <div className='content-align'>
+              <h2>O que é?</h2>
+              <p>
+                VPN significa “Virtual Private Network” (Rede Privada Virtual) e descreve a oportunidade de 
+                estabelecer uma conexão de rede protegida ao usar redes públicas. As VPNs criptografam seu tráfego 
+                de Internet e disfarçam sua identidade online. Isso torna mais difícil para terceiros rastrear suas 
+                atividades online e roubar seus dados. A criptografia ocorre em tempo real. <br /><br />
+              </p>  
+
+              <h2>Como funciona uma VPN?</h2>
+
+              <p>
+                Uma VPN oculta seu endereço IP deixando que a rede redirecione você por meio de um servidor remoto 
+                especialmente configurado executado por um host VPN. Isso significa que se você navegar online com 
+                uma VPN, o servidor VPN se tornará a fonte de seus dados. Isso significa que seu Provedor de 
+                Serviços de Internet (ISP) e terceiros não podem ver quais sites você visita ou quais dados você 
+                envia e recebe online. Uma VPN funciona como um filtro que transforma todos os seus dados em 
+                "rabiscos". Mesmo que alguém apreendesse dados, seria inútil. <br /><br />
+              </p> 
+              <p>
+                Uma VPN redireciona seu tráfego por meio de um servidor remoto, criptografando-o durante o processo. 
+                Normalmente, quando você tenta acessar um site, seu ISP (Provedor de Serviços de Internet) recebe a 
+                solicitação e redireciona você ao seu destino. Mas quando você se conecta a uma VPN, ela redireciona 
+                seu tráfego de Internet por meio de um servidor de VPN primeiro, antes de chegar ao seu destino.
+                Em primeiro lugar, uma VPN esconde seus dados contra bisbilhoteiros. A criptografia é importante 
+                quando você deseja proteger seu tráfego e minimizar seus rastros online. Dessa forma, seu ISP não 
+                poderá vender todo seu histórico de navegação pelo maior lance.
+                Seu IP (e, portanto, sua localização virtual) também permanecerá oculto e você receberá um novo, que 
+                pertence ao servidor de VPN, ao qual você estabelecerá uma conexão. Isso garante segurança extra e 
+                aumenta significativamente sua privacidade online. Ninguém saberá de qual cidade ou país você está 
+                navegando.
+              </p>
+              
+              </div>}
+          </li>          
         </ul>
       </nav>
     </div>
