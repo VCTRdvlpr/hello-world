@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavBtnComponent from './components/navBtnComponent';
+import MainNavBtnComponent from './components/mainNavBtnComponent';
 import { useState } from 'react';
 
 function App() {
@@ -27,7 +28,32 @@ function App() {
 
   return (
     <div>
-      <h1>Hello <span id='title-color'>world</span> !</h1>    
+      <h1>Hello <span id='title-color'>world</span> !</h1>  
+      <nav>
+        <ul className='main-nav-align'>
+          <li>
+            <MainNavBtnComponent title='Hardware'/>
+          </li>
+          <li>
+            <MainNavBtnComponent title='Sistemas Operacionais'/>
+          </li>
+          <li>
+            <MainNavBtnComponent title='Linguagem de marcação e estilo'/>
+          </li>
+          <li>
+            <MainNavBtnComponent title='Linguagem de programação'/>
+          </li>
+          <li>
+            <MainNavBtnComponent title='Banco de Dados'/>
+          </li>
+          <li>
+            <MainNavBtnComponent title='Redes e Conexões'/>
+          </li>
+          <li>
+            <MainNavBtnComponent title='Metodologias'/>
+          </li>
+        </ul>
+      </nav>  
       <nav>
         <ul className='nav-align'>
           <li>
