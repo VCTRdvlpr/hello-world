@@ -1,9 +1,7 @@
 import React from "react";
 import MainNavBtnComponent from './mainNavBtnComponent';
 
-interface Props {
-  title: string;
-}
+
 
 const ContentNavBar: React.FC = () => {
   return(

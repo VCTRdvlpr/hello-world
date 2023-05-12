@@ -29,8 +29,7 @@ function App() {
   return (
     <div>
       <h1>Hello <span id='title-color'>world</span> !</h1>
-      <ContentNavBar/>  
-        
+      <ContentNavBar/>          
       <nav>
         <ul className='nav-align'>
           <li>
